@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media (max-width: 375px) {
+        background-image: url(../assets/home/background-home-mobile.jpg);
+    }
+    @media (max-width: 768px) {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+        header {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        svg {
+            transform: scale(0.8334);
+            cursor: pointer;
+        }
+    }
+    @media (min-width: 769px) {
+        background-image: url(../assets/home/background-home-desktop.jpg);
+    }
+}
+::-webkit-scrollbar {
+    display: none;
+}
