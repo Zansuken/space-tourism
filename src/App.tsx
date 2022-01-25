@@ -1,6 +1,7 @@
 import './styles/app.scss';
 import { ReactComponent as Logo } from './assets/shared/logo.svg'
 import NavMenu from './components/Nav';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <Logo />
         <NavMenu />
       </header>
+      <main>
+        <Home />
+      </main>
     </div>
   );
 }
