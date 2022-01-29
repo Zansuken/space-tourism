@@ -2,6 +2,7 @@ import './styles/app.scss';
 import { ReactComponent as Logo } from './assets/shared/logo.svg'
 import NavMenu from './components/Nav';
 import Home from './components/Home';
+import Destination from './components/Destination';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </header>
       <main>
         <Home />
+        <Destination />
       </main>
     </div>
   );
