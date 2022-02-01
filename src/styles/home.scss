@@ -26,21 +26,23 @@ section {
         margin: 0;
     }
 }
+.explore-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 .explore-button {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     appearance: none;
     border: none;
     background: white;
-    width: 150px;
-    height: 150px;
+    padding: 72px 37px;
     border-radius: 50%;
     color: #0B0D17;
     font-family: 'Bellefair', serif;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 1.25px;
+    text-decoration: none;
     // z-index: -1;
     cursor: pointer;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import '../styles/nav.scss'
 
 export default function NavMenu() {
@@ -25,10 +26,10 @@ export default function NavMenu() {
                 }} />
                 <nav className='visible'>
                     <ul>
-                        <li><a href=""><span className='number'>00</span><span className='section-tag'>HOME</span></a></li>
-                        <li><a href=""><span className='number'>01</span><span className='section-tag'>DESTINATION</span></a></li>
-                        <li><a href=""><span className='number'>02</span><span className='section-tag'>CREW</span></a></li>
-                        <li><a href=""><span className='number'>03</span><span className='section-tag'>TECHNOLOGY</span></a></li>
+                        <li><NavLink to='/'><span className='number'>00</span><span className='section-tag'>HOME</span></NavLink></li>
+                        <li><NavLink to='/destinations'><span className='number'>01</span><span className='section-tag'>DESTINATION</span></NavLink></li>
+                        <li><NavLink to='/crew'><span className='number'>02</span><span className='section-tag'>CREW</span></NavLink></li>
+                        <li><NavLink to='/technology'><span className='number'>03</span><span className='section-tag'>TECHNOLOGY</span></NavLink></li>
                     </ul>
 
                 </nav>
