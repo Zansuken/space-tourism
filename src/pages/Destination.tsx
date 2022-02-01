@@ -1,5 +1,4 @@
 import datas from "../data/data.json";
-import '../styles/destination.scss';
 
 export default function Destination() {
 
@@ -7,8 +6,8 @@ export default function Destination() {
     const planets = planet.filter((el) => {
         return el.name
     })
-    const planetsList = planets.map((element) => <li key={element.name.toString()}><a>{element.name.toLocaleUpperCase()}</a></li>)
-    const image = require('../assets/destination/image-' + planet[0].name.toLocaleLowerCase() + '.png')
+    const planetsList = planets.map((element) => <li key={element.name.toString()}><a href="#">{element.name.toLocaleUpperCase()}</a></li>)
+    const image = require('../../public/assets/destination/image-' + planet[0].name.toLocaleLowerCase() + '.png')
 
     return (
         <>

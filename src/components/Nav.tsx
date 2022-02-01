@@ -4,6 +4,7 @@ import '../styles/nav.scss'
 export default function NavMenu() {
 
     const [visible, setVisible] = useState(false)
+    const [layout, setLayout] = useState()
 
     if (visible === false) {
         return (

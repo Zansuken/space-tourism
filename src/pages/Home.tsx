@@ -1,8 +1,13 @@
-import '../styles/home.scss'
+import Logo from '../components/Logo';
+import NavMenu from '../components/Nav';
 
 export default function Home() {
     return (
         <>
+            <header>
+                <Logo />
+                <NavMenu />
+            </header>
             <section>
                 <h2>SO, YOU WANT TO TRAVEL TO</h2>
                 <h1>SPACE</h1>

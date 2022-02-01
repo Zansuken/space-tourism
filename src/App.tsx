@@ -1,21 +1,18 @@
 import './styles/app.scss';
-import { ReactComponent as Logo } from './assets/shared/logo.svg'
-import NavMenu from './components/Nav';
-import Home from './components/Home';
-import Destination from './components/Destination';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import Destination from './pages/Destination';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Logo />
-        <NavMenu />
-      </header>
-      <main>
-        <Home />
-        <Destination />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/destinations' element={<Destination />} />
+        <Route element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

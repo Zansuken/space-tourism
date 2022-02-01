@@ -1,13 +1,18 @@
+@import url(./destination.scss);
+@import url(./fonts.scss);
+@import url(./home.scss);
+@import url(./nav.scss);
+@import url(./reset-styles.scss);
 body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     @media (max-width: 375px) {
-        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-image: url(../../public/assets/home/background-home-mobile.jpg);
     }
     @media (max-width: 768px) {
-        background-image: url(../assets/home/background-home-tablet.jpg);
+        background-image: url(../../public/assets/home/background-home-tablet.jpg);
         header {
             padding: 24px;
             display: flex;
@@ -20,7 +25,7 @@ body {
         }
     }
     @media (min-width: 769px) {
-        background-image: url(../assets/home/background-home-desktop.jpg);
+        background-image: url(../../public/assets/home/background-home-desktop.jpg);
     }
 }
 ::-webkit-scrollbar {
