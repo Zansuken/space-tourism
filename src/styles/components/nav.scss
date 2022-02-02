@@ -1,9 +1,9 @@
-@import url(./fonts.scss);
+@import url(../fonts.scss);
 
 .hamburger-logo {
     appearance: none;
     border: none;
-    background: url(../../public/assets/shared/icon-hamburger.svg) no-repeat;
+    background: url(../../../public/assets/shared/icon-hamburger.svg) no-repeat;
     width: 24px;
     height: 21px;
     z-index: 10;
@@ -12,7 +12,7 @@
 .cross-logo {
     appearance: none;
     border: none;
-    background: url(../../public/assets/shared/icon-close.svg) no-repeat;
+    background: url(../../../public/assets/shared/icon-close.svg) no-repeat;
     width: 24px;
     height: 21px;
     z-index: 10;
@@ -37,6 +37,12 @@ nav {
         color: white;
         font-size: 16px;
         letter-spacing: 2.7px;
+        span {
+            padding-bottom: 3px;
+        }
+        &:hover > span:last-of-type {
+            border-bottom: white 2px solid;
+        }
     }
     .number {
         font-family: 'Barlow Condensed', sans-serif;

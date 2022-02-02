@@ -1,9 +1,9 @@
-@import url(./destination.scss);
+@import url(./pages/destination.scss);
 @import url(./fonts.scss);
-@import url(./home.scss);
-@import url(./nav.scss);
+@import url(./pages/home.scss);
+@import url(./components/nav.scss);
 @import url(./reset-styles.scss);
-@import url(./logo.scss);
+@import url(./components/logo.scss);
 body {
     height: 100vh;
     background-repeat: no-repeat;
