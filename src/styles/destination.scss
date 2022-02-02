@@ -18,9 +18,10 @@ img {
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 2.3625px;
-    color: #D0D6F9;
     margin-bottom: 20px;
     a {
+        color: #D0D6F9;
+        text-decoration: none;
         cursor: pointer;
         border-bottom: 3px solid transparent;
         &:hover {

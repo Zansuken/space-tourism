@@ -1,8 +1,16 @@
+import { FC, useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../components/Logo';
 import NavMenu from '../components/Nav';
 
-export default function Home() {
+const Home: FC = () => {
+
+    useLayoutEffect(() => {
+        const body = document.querySelector('body')
+        if (!body) return
+        body.className = 'bg-home'
+    }, [])
+
     return (
         <>
             <header>
@@ -20,3 +28,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home
