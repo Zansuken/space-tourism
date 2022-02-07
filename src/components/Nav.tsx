@@ -1,9 +1,20 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useOnClickOutside } from 'usehooks-ts'
+
 
 export default function NavMenu() {
 
     const [visible, setVisible] = useState(false)
+
+    const ref = useRef(null)
+
+    const handleClickOutside = () => {
+        setVisible(false)
+    }
+
+    useOnClickOutside(ref, handleClickOutside)
+
 
     if (!visible) {
         return (
@@ -17,9 +28,9 @@ export default function NavMenu() {
     }
     return (
         <>
-            <button className="cross-logo" onClick={() => setVisible(!visible)} />
+            <button ref={ref} className="cross-logo" onClick={() => setVisible(!visible)} />
             <nav className='visible'>
-                <ul>
+                <ul ref={ref}>
                     <li><NavLink to='/'><span className='number'>00</span><span className='section-tag'>HOME</span></NavLink></li>
                     <li><NavLink to='/destinations'><span className='number'>01</span><span className='section-tag'>DESTINATION</span></NavLink></li>
                     <li><NavLink to='/crew'><span className='number'>02</span><span className='section-tag'>CREW</span></NavLink></li>

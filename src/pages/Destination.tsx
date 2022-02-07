@@ -9,9 +9,6 @@ export default function Destination() {
     const [planetIndex, setPlanetIndex] = useState(0)
 
     const planet = [...datas.destinations]
-    const planets = planet.filter((el) => {
-        return el.name
-    })
 
     const planetsNames = [planet[0].name, planet[1].name, planet[2].name, planet[3].name]
     const [selectedPlanet, setSelectedPlanet] = useState(planetsNames[0])
@@ -21,7 +18,8 @@ export default function Destination() {
         if (!body) return
         body.className = 'bg-destinations'
     }, [selectedPlanet, planetIndex])
-    const image = require('../../public/assets/destination/image-' + planet[planetIndex].name.toLocaleLowerCase() + '.png')
+    const image =
+        require('../../public/assets/destination/image-' + planet[planetIndex].name.toLocaleLowerCase() + '.png')
 
     return (
         <>
@@ -42,11 +40,9 @@ export default function Destination() {
                             onClick={() => {
                                 setPlanetIndex(index)
                                 setSelectedPlanet(planetsNames[index])
-                                console.log(planetsNames[index]);
-
                             }}
                             checked={element === selectedPlanet}
-                            onChange={(e) => {
+                            onChange={() => {
                                 setSelectedPlanet(planetsNames[index])
                             }} />
                         <label

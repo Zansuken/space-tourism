@@ -17,27 +17,27 @@
         justify-self: center;
         justify-content: space-between;
         padding: 0;
-        .crew-nav-buttons {
-            padding: 0;
-            margin: 14px 0 0 0;
-            appearance: none;
-            border: none;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #979797;
-            cursor: pointer;
-        }
-        .crew-nav-buttons-active {
-            padding: 0;
-            margin: 14px 0 0 0;
-            appearance: none;
-            border: none;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #FFFF;
-            cursor: pointer;
+        list-style: none;
+        input {
+            &[type='radio'] {
+                padding: 0;
+                margin: 14px 0 0 0;
+                appearance: none;
+                border: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #979797;
+                cursor: pointer;
+                &:checked {
+                    border-bottom: 3px solid white;
+                    background: white;
+                    padding-bottom: 8px;
+                    cursor: pointer;
+                    width: 11px;
+                    height: 11px;
+                }
+            }
         }
     }
 }

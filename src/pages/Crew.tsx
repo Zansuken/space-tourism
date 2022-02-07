@@ -5,11 +5,6 @@ import datas from "../data/data.json";
 
 function Crew() {
 
-    useLayoutEffect(() => {
-        const body = document.querySelector('body')
-        if (!body) return
-        body.className = 'bg-crew'
-    }, [])
 
     const [crewMateIndex, setCrewMateIndex] = useState(0)
 
@@ -18,21 +13,16 @@ function Crew() {
         const name = element.name.replace(/\s/g, '-').toLocaleLowerCase()
         return name
     })
+    const crewNames = [crew[0].name, crew[1].name, crew[2].name, crew[3].name,]
+    const [selectedCrew, setSelectedCrew] = useState(crewNames[0])
     const [active, setActive] = useState('crew-nav-buttons')
-    const navigation = crew.map((element, index) => {
-        return <button
-            className='crew-nav-buttons'
-            key={element.name}
-            onClick={() => {
-                setCrewMateIndex(index)
-                if (active) {
-                    setActive('crew-nav-buttons-active')
-                }
-            }}
-        ></button>
-    })
     const image = require('../../public/assets/crew/image-' + crewName[crewMateIndex] + '.png')
 
+    useLayoutEffect(() => {
+        const body = document.querySelector('body')
+        if (!body) return
+        body.className = 'bg-crew'
+    }, [selectedCrew])
 
     return (
         <>
@@ -44,7 +34,24 @@ function Crew() {
             <img className="crew-picture" src={image} alt={crew[crewMateIndex].name + " picture"} />
             <div className="separation-line"></div>
             <div className="crew-nav">
-                <ul>{navigation}</ul>
+                <ul>{
+                    crewNames.map((element, index) =>
+                        <li key={element}>
+                            <input type="radio"
+                                name={element}
+                                id={element}
+                                className='crew-nav-buttons'
+                                checked={element === selectedCrew}
+                                onClick={() => {
+                                    setCrewMateIndex(index)
+                                    setSelectedCrew(crewNames[index])
+                                    if (active) {
+                                        setActive('crew-nav-buttons-active')
+                                    }
+                                }}
+                                onChange={() => setSelectedCrew(crewNames[index])} />
+                        </li>
+                    )}</ul>
             </div>
             <div className="infos-wrapper">
                 <span>{crew[crewMateIndex].role}</span>
