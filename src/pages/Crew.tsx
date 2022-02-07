@@ -15,7 +15,6 @@ function Crew() {
     })
     const crewNames = [crew[0].name, crew[1].name, crew[2].name, crew[3].name,]
     const [selectedCrew, setSelectedCrew] = useState(crewNames[0])
-    const [active, setActive] = useState('crew-nav-buttons')
     const image = require('../../public/assets/crew/image-' + crewName[crewMateIndex] + '.png')
 
     useLayoutEffect(() => {
@@ -45,9 +44,6 @@ function Crew() {
                                 onClick={() => {
                                     setCrewMateIndex(index)
                                     setSelectedCrew(crewNames[index])
-                                    if (active) {
-                                        setActive('crew-nav-buttons-active')
-                                    }
                                 }}
                                 onChange={() => setSelectedCrew(crewNames[index])} />
                         </li>

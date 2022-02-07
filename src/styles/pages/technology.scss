@@ -1,0 +1,39 @@
+.technology-img {
+    width: 100vw;
+    object-fit: contain;
+    object-position: center;
+}
+.tech-nav {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 152px;
+        padding: 0;
+        input[type='radio'] {
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: rgba(255, 255, 255, 0.250) 1px solid;
+            border-radius: 50%;
+            cursor: pointer;
+            &:checked {
+                background: white;
+                + label {
+                    color: #0B0D17;
+                }
+            }
+        }
+        label {
+            position: relative;
+            color: white;
+            left: -50%;
+            top: calc(-50% + 0.5em);
+            cursor: pointer;
+        }
+    }
+}

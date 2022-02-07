@@ -12,14 +12,14 @@ export default function Destination() {
 
     const planetsNames = [planet[0].name, planet[1].name, planet[2].name, planet[3].name]
     const [selectedPlanet, setSelectedPlanet] = useState(planetsNames[0])
+    const image =
+        require('../../public/assets/destination/image-' + planet[planetIndex].name.toLocaleLowerCase() + '.png')
 
     useLayoutEffect(() => {
         const body = document.querySelector('body')
         if (!body) return
         body.className = 'bg-destinations'
     }, [selectedPlanet, planetIndex])
-    const image =
-        require('../../public/assets/destination/image-' + planet[planetIndex].name.toLocaleLowerCase() + '.png')
 
     return (
         <>
