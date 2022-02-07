@@ -16,7 +16,7 @@ body {
             background-image: url(../../public/assets/destination/background-destination-mobile.jpg);
         }
         &.bg-crew {
-            background-image: url(../../public/assets/crew/background-crew-mobile.jpg);
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../public/assets/crew/background-crew-mobile.jpg);
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-mobile.jpg);
@@ -34,7 +34,7 @@ body {
             background-image: url(../../public/assets/destination/background-destination-tablet.jpg);
         }
         &.bg-crew {
-            background-image: url(../../public/assets/crew/background-crew-tablet.jpg);
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../public/assets/crew/background-crew-tablet.jpg);
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-tablet.jpg);
@@ -46,7 +46,7 @@ body {
             background-image: url(../../public/assets/destination/background-destination-desktop.jpg);
         }
         &.bg-crew {
-            background-image: url(../../public/assets/crew/background-crew-desktop.jpg);
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../public/assets/crew/background-crew-desktop.jpg);
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-desktop.jpg);

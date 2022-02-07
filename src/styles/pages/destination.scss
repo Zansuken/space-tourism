@@ -19,16 +19,22 @@ img {
     line-height: 17px;
     letter-spacing: 2.3625px;
     margin-bottom: 20px;
+    input {
+        &[type='radio'] {
+            display: none;
+        }
+        &:checked + .planet-links {
+            border-bottom: 3px solid white;
+            color: white;
+            padding-bottom: 8px;
+        }
+    }
+    
     .planet-links {
         color: #D0D6F9;
         text-decoration: none;
         cursor: pointer;
         border-bottom: 3px solid transparent;
-        &:hover {
-            border-bottom: 3px solid white;
-            color: white;
-            padding-bottom: 8px;
-        }
     }
 }
 h1 {

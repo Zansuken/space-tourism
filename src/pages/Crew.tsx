@@ -18,9 +18,21 @@ function Crew() {
         const name = element.name.replace(/\s/g, '-').toLocaleLowerCase()
         return name
     })
-    const navigation = crew.map((element, index) =>
-        <button className='crew-nav-buttons' key={element.name} onClick={() => setCrewMateIndex(index)}></button>)
+    const [active, setActive] = useState('crew-nav-buttons')
+    const navigation = crew.map((element, index) => {
+        return <button
+            className='crew-nav-buttons'
+            key={element.name}
+            onClick={() => {
+                setCrewMateIndex(index)
+                if (active) {
+                    setActive('crew-nav-buttons-active')
+                }
+            }}
+        ></button>
+    })
     const image = require('../../public/assets/crew/image-' + crewName[crewMateIndex] + '.png')
+
 
     return (
         <>
@@ -29,7 +41,7 @@ function Crew() {
                 <NavMenu />
             </header>
             <h2><span className="number">02</span>MEET YOUR CREW</h2>
-            <img src={image} alt={crew[crewMateIndex].name + " picture"} />
+            <img className="crew-picture" src={image} alt={crew[crewMateIndex].name + " picture"} />
             <div className="separation-line"></div>
             <div className="crew-nav">
                 <ul>{navigation}</ul>

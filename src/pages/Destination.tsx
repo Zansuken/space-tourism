@@ -5,11 +5,6 @@ import datas from "../data/data.json";
 
 export default function Destination() {
 
-    useLayoutEffect(() => {
-        const body = document.querySelector('body')
-        if (!body) return
-        body.className = 'bg-destinations'
-    }, [])
 
     const [planetIndex, setPlanetIndex] = useState(0)
 
@@ -17,7 +12,15 @@ export default function Destination() {
     const planets = planet.filter((el) => {
         return el.name
     })
-    const planetsList = planets.map((element, index) => <li key={element.name.toString()}><span className="planet-links" onClick={() => { setPlanetIndex(index) }}>{element.name.toLocaleUpperCase()}</span></li>)
+
+    const planetsNames = [planet[0].name, planet[1].name, planet[2].name, planet[3].name]
+    const [selectedPlanet, setSelectedPlanet] = useState(planetsNames[0])
+
+    useLayoutEffect(() => {
+        const body = document.querySelector('body')
+        if (!body) return
+        body.className = 'bg-destinations'
+    }, [selectedPlanet, planetIndex])
     const image = require('../../public/assets/destination/image-' + planet[planetIndex].name.toLocaleLowerCase() + '.png')
 
     return (
@@ -31,7 +34,28 @@ export default function Destination() {
             <img src={image} alt={planet[planetIndex].name + " picture"} />
 
             <ul className="destination-nav">
-                {planetsList}
+                {planetsNames.map((element, index) =>
+                    <li key={element.toString()}>
+                        <input type="radio"
+                            name={element}
+                            id={element}
+                            onClick={() => {
+                                setPlanetIndex(index)
+                                setSelectedPlanet(planetsNames[index])
+                                console.log(planetsNames[index]);
+
+                            }}
+                            checked={element === selectedPlanet}
+                            onChange={(e) => {
+                                setSelectedPlanet(planetsNames[index])
+                            }} />
+                        <label
+                            htmlFor={element}
+                            className="planet-links">
+                            {element.toLocaleUpperCase()}
+                        </label>
+                    </li>
+                )}
             </ul>
 
             <h1>{planet[planetIndex].name.toLocaleUpperCase()}</h1>
