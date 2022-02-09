@@ -31,10 +31,34 @@ export default function NavMenu() {
             <button ref={ref} className="cross-logo" onClick={() => setVisible(!visible)} />
             <nav className='visible'>
                 <ul ref={ref}>
-                    <li><NavLink to='/'><span className='number'>00</span><span className='section-tag'>HOME</span></NavLink></li>
-                    <li><NavLink to='/destinations'><span className='number'>01</span><span className='section-tag'>DESTINATION</span></NavLink></li>
-                    <li><NavLink to='/crew'><span className='number'>02</span><span className='section-tag'>CREW</span></NavLink></li>
-                    <li><NavLink to='/technology'><span className='number'>03</span><span className='section-tag'>TECHNOLOGY</span></NavLink></li>
+                    <li><NavLink style={({ isActive }) => ({
+                        borderRight: isActive ? "4px solid white" : "none",
+                        display: isActive ? "flex" : "block",
+                        justifySelf: isActive ? "right" : "none",
+                        width: isActive ? "calc(100% - 4px)" : "unset",
+                        padding: "6px 0"
+                    })} to='/'><span className='number'>00</span><span className='section-tag'>HOME</span></NavLink></li>
+                    <li><NavLink style={({ isActive }) => ({
+                        borderRight: isActive ? "4px solid white" : "none",
+                        display: isActive ? "flex" : "block",
+                        justifySelf: isActive ? "right" : "none",
+                        width: isActive ? "calc(100% - 4px)" : "unset",
+                        padding: "6px 0"
+                    })} to='/destinations'><span className='number'>01</span><span className='section-tag'>DESTINATION</span></NavLink></li>
+                    <li><NavLink style={({ isActive }) => ({
+                        borderRight: isActive ? "4px solid white" : "none",
+                        display: isActive ? "flex" : "block",
+                        justifySelf: isActive ? "right" : "none",
+                        width: isActive ? "calc(100% - 4px)" : "unset",
+                        padding: "6px 0"
+                    })} to='/crew'><span className='number'>02</span><span className='section-tag'>CREW</span></NavLink></li>
+                    <li><NavLink style={({ isActive }) => ({
+                        borderRight: isActive ? "4px solid white" : "none",
+                        display: isActive ? "flex" : "block",
+                        justifySelf: isActive ? "right" : "none",
+                        width: isActive ? "calc(100% - 4px)" : "unset",
+                        padding: "6px 0"
+                    })} to='/technology'><span className='number'>03</span><span className='section-tag'>TECHNOLOGY</span></NavLink></li>
                 </ul>
 
             </nav>

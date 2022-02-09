@@ -28,30 +28,31 @@ nav {
         list-style: none;
         margin: 0;
         padding: 118px 0 0 32px;
-        li:not(:last-of-type) {
-            margin-bottom: 32px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
     a {
         text-decoration: none;
         color: white;
         font-size: 16px;
         letter-spacing: 2.7px;
-        span {
-            padding-bottom: 3px;
-        }
-        &:hover > span:last-of-type {
-            border-bottom: white 2px solid;
+        width: 80px;
+        padding: 0;
+        &:hover {
+            border-right: 4px solid white;
         }
     }
     .number {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 700;
+        vertical-align: middle;
     }
     .section-tag {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 400;
         margin-left: 14px;
+        vertical-align: middle;
     }
 }
 .hidden {
