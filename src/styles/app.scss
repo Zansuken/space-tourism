@@ -57,6 +57,8 @@ body {
         }
         &.bg-crew {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../public/assets/crew/background-crew-desktop.jpg);
+            background-size: cover;
+        
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-desktop.jpg);
