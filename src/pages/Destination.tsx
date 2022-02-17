@@ -58,21 +58,24 @@ export default function Destination() {
 
             <p>{planet[planetIndex].description}</p>
             <div className="separation-line"></div>
-            <div className="distance">
-                <span className="title">
-                    AVG. DISTANCE
-                </span>
-                <h1 className="value">
-                    {planet[planetIndex].distance}
-                </h1>
-            </div>
-            <div className="travel-time">
-                <span className="title">
-                    EST. TRAVEL TIME
-                </span>
-                <h1 className="value">
-                    {planet[planetIndex].travel}
-                </h1>
+            <div className="datas">
+                <div className="distance">
+                    <span className="title">
+                        AVG. DISTANCE
+                    </span>
+                    <h1 className="value">
+                        {planet[planetIndex].distance}
+                    </h1>
+                </div>
+                <div className="travel-time">
+                    <span className="title">
+                        EST. TRAVEL TIME
+                    </span>
+                    <h1 className="value">
+                        {planet[planetIndex].travel}
+                    </h1>
+
+                </div>
             </div>
         </>
     )

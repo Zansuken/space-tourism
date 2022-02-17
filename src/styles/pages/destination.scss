@@ -5,6 +5,11 @@ img {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 12px;
+    @media (min-width: 376px) {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 39px;
+    }
 }
 .destination-nav {
     display: flex;
@@ -19,6 +24,14 @@ img {
     line-height: 17px;
     letter-spacing: 2.3625px;
     margin-bottom: 20px;
+    @media (min-width: 376px) {
+        max-width: 300px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 32px;
+    }
+
     input {
         &[type='radio'] {
             display: none;
@@ -45,6 +58,11 @@ h1 {
     line-height: 64px;
     margin: 0;
     text-align: center;
+    @media (min-width: 376px) {
+    font-size: 80px;
+    line-height: 92px;
+
+    }
 }
 h2 {
     font-family: 'Barlow Condensed', sans-serif;
@@ -60,6 +78,11 @@ h2 {
         margin-right: 18px;
         filter: opacity(0.25)
     }
+    @media (min-width: 376px) {
+        margin: 40px 0 32px 0;
+        text-align: left;
+        padding: 0 0 28px 38.5px;
+    }
 }
 p {
     font-family: 'Barlow', sans-serif;
@@ -71,29 +94,48 @@ p {
     color: #D0D6F9;
     padding: 0 24px;
     margin: 0 0 32px 0;
+    @media (min-width: 376px) {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 8px 0 49px 0;
+        padding: 0 98px;
+
+    }
 }
 .separation-line {
     border-top: 1px solid #383B4B;
     margin: 0 24px;
 }
-.distance, .travel-time {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 32px;
-    span {
-        text-align: center;
-        &.title {
-            font-size: 14px;
-            line-height: 17px;
-            letter-spacing: 2.36px;
-            color: #D0D6F9;
-            margin-bottom: 12px;
-        }
+.datas {
+    @media (min-width: 376px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
     }
-    .value {
-        font-size: 28px;
-        line-height: 32px;
-        text-transform: uppercase;
+    .distance, .travel-time {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 32px;
+        @media (min-width: 376px) {
+            width: fit-content;
+            margin-top: 29px;
+        }
+        span {
+            text-align: center;
+            &.title {
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 2.36px;
+                color: #D0D6F9;
+                margin-bottom: 12px;
+            }
+        }
+        .value {
+            font-size: 28px;
+            line-height: 32px;
+            text-transform: uppercase;
+        }
     }
 }
