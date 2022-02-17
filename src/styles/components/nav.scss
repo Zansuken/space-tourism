@@ -8,6 +8,9 @@
     height: 21px;
     z-index: 10;
     cursor: pointer;
+    @media (min-width: 376px) {
+        display: none;
+    }
 }
 .cross-logo {
     appearance: none;
@@ -17,6 +20,9 @@
     height: 21px;
     z-index: 10;
     cursor: pointer;
+    @media (min-width: 376px) {
+        display: none;
+    }
 }
 nav {
     position: absolute;
@@ -24,6 +30,10 @@ nav {
     top: 0;
     width: 0;
     transition: 0.3s ease-in-out;
+    @media (min-width: 376px) {
+        height: 96px;
+        max-width: 450px;
+    }
     ul {
         list-style: none;
         margin: 0;
@@ -31,6 +41,11 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        @media (min-width: 376px) {
+            padding: 0 48px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     a {
         text-decoration: none;
@@ -39,6 +54,16 @@ nav {
         letter-spacing: 2.7px;
         width: 80px;
         padding: 0;
+        position: relative;
+        @media (min-width: 376px) {
+            padding: 39px 0;
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 2.3625px;
+            display: flex;
+            justify-content: center;
+        }
         &:hover {
             border-right: 4px solid white;
         }
@@ -47,18 +72,46 @@ nav {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 700;
         vertical-align: middle;
+        @media (min-width: 376px) {
+            display: none;
+        }
     }
     .section-tag {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 400;
         margin-left: 14px;
         vertical-align: middle;
+        @media (min-width: 376px) {
+            margin: 0;
+            &:hover::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                min-width: 40.86px;
+                width: 100%;
+                max-width: 99.42px;
+                height: 4px;
+                background-color: white;
+            }
+        }
     }
 }
 .hidden {
     right: calc(-100% + 24px);
     width: 0;
     opacity: 0;
+    @media (min-width: 376px) {
+        right: 0;
+        width: 100%;
+        max-width: 450px;
+        height: fit-content;
+        padding: 0;
+        opacity: 1;
+        backdrop-filter: blur(20px);
+        background: #9797970a;
+        z-index: 9;
+    }
 }
 .visible {
     right: 0;
@@ -66,4 +119,9 @@ nav {
     backdrop-filter: blur(20px);
     background: #97979736;
     z-index: 9;
+    @media (min-width: 376px) {
+        right: 0;
+        width: fit-content;
+        opacity: 1;
+    }
 }

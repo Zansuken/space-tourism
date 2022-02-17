@@ -76,3 +76,24 @@ p {
     border-top: 1px solid #383B4B;
     margin: 0 24px;
 }
+.distance, .travel-time {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 32px;
+    span {
+        text-align: center;
+        &.title {
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 2.36px;
+            color: #D0D6F9;
+            margin-bottom: 12px;
+        }
+    }
+    .value {
+        font-size: 28px;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+}
