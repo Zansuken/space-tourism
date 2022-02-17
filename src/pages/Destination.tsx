@@ -29,54 +29,58 @@ export default function Destination() {
             </header>
 
             <h2><span className="number">01</span>PICK YOUR DESTINATION</h2>
-            <img src={image} alt={planet[planetIndex].name + " picture"} />
+            <section className="destination">
+                <img src={image} alt={planet[planetIndex].name + " picture"} />
+                <div className="destination-infos-wrapper">
 
-            <ul className="destination-nav">
-                {planetsNames.map((element, index) =>
-                    <li key={element.toString()}>
-                        <input type="radio"
-                            name={element}
-                            id={element}
-                            onClick={() => {
-                                setPlanetIndex(index)
-                                setSelectedPlanet(planetsNames[index])
-                            }}
-                            checked={element === selectedPlanet}
-                            onChange={() => {
-                                setSelectedPlanet(planetsNames[index])
-                            }} />
-                        <label
-                            htmlFor={element}
-                            className="planet-links">
-                            {element.toLocaleUpperCase()}
-                        </label>
-                    </li>
-                )}
-            </ul>
+                    <ul className="destination-nav">
+                        {planetsNames.map((element, index) =>
+                            <li key={element.toString()}>
+                                <input type="radio"
+                                    name={element}
+                                    id={element}
+                                    onClick={() => {
+                                        setPlanetIndex(index)
+                                        setSelectedPlanet(planetsNames[index])
+                                    }}
+                                    checked={element === selectedPlanet}
+                                    onChange={() => {
+                                        setSelectedPlanet(planetsNames[index])
+                                    }} />
+                                <label
+                                    htmlFor={element}
+                                    className="planet-links">
+                                    {element.toLocaleUpperCase()}
+                                </label>
+                            </li>
+                        )}
+                    </ul>
 
-            <h1>{planet[planetIndex].name.toLocaleUpperCase()}</h1>
+                    <h1>{planet[planetIndex].name.toLocaleUpperCase()}</h1>
 
-            <p>{planet[planetIndex].description}</p>
-            <div className="separation-line"></div>
-            <div className="datas">
-                <div className="distance">
-                    <span className="title">
-                        AVG. DISTANCE
-                    </span>
-                    <h1 className="value">
-                        {planet[planetIndex].distance}
-                    </h1>
+                    <p>{planet[planetIndex].description}</p>
+                    <div className="separation-line"></div>
+                    <div className="datas">
+                        <div className="distance">
+                            <span className="title">
+                                AVG. DISTANCE
+                            </span>
+                            <h1 className="value">
+                                {planet[planetIndex].distance}
+                            </h1>
+                        </div>
+                        <div className="travel-time">
+                            <span className="title">
+                                EST. TRAVEL TIME
+                            </span>
+                            <h1 className="value">
+                                {planet[planetIndex].travel}
+                            </h1>
+
+                        </div>
+                    </div>
                 </div>
-                <div className="travel-time">
-                    <span className="title">
-                        EST. TRAVEL TIME
-                    </span>
-                    <h1 className="value">
-                        {planet[planetIndex].travel}
-                    </h1>
-
-                </div>
-            </div>
+            </section>
         </>
     )
 }

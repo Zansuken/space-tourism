@@ -1,7 +1,8 @@
 .home {
     @media (min-width: 769px) {
         display: flex;
-        gap: 616px;
+        justify-content: space-between;
+        padding-right: 165px;
     }
     .home-intro {
         color: #D0D6F9;
