@@ -30,29 +30,33 @@ function Crew() {
                 <NavMenu />
             </header>
             <h2><span className="number">02</span>MEET YOUR CREW</h2>
-            <img className="crew-picture" src={image} alt={crew[crewMateIndex].name + " picture"} />
-            <div className="separation-line"></div>
-            <div className="crew-nav">
-                <ul>{
-                    crewNames.map((element, index) =>
-                        <li key={element}>
-                            <input type="radio"
-                                name={element}
-                                id={element}
-                                className='crew-nav-buttons'
-                                checked={element === selectedCrew}
-                                onClick={() => {
-                                    setCrewMateIndex(index)
-                                    setSelectedCrew(crewNames[index])
-                                }}
-                                onChange={() => setSelectedCrew(crewNames[index])} />
-                        </li>
-                    )}</ul>
-            </div>
-            <div className="infos-wrapper">
-                <span>{crew[crewMateIndex].role}</span>
-                <h1>{crew[crewMateIndex].name}</h1>
-                <p>{crew[crewMateIndex].bio}</p>
+            <div className="crew">
+                <img className="crew-picture" src={image} alt={crew[crewMateIndex].name + " picture"} />
+                <div className="separation-line"></div>
+                <div className="datas-crew-wrapper">
+                    <div className="crew-nav">
+                        <ul>{
+                            crewNames.map((element, index) =>
+                                <li key={element}>
+                                    <input type="radio"
+                                        name={element}
+                                        id={element}
+                                        className='crew-nav-buttons'
+                                        checked={element === selectedCrew}
+                                        onClick={() => {
+                                            setCrewMateIndex(index)
+                                            setSelectedCrew(crewNames[index])
+                                        }}
+                                        onChange={() => setSelectedCrew(crewNames[index])} />
+                                </li>
+                            )}</ul>
+                    </div>
+                    <div className="infos-wrapper">
+                        <span>{crew[crewMateIndex].role}</span>
+                        <h1>{crew[crewMateIndex].name}</h1>
+                        <p>{crew[crewMateIndex].bio}</p>
+                    </div>
+                </div>
             </div>
         </>
     );
