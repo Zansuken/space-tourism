@@ -9,11 +9,13 @@
 body {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 100%;
+    background-position: top;
+    height: 100vh;
     @media (max-width: 375px) {
         background-image: url(../../public/assets/home/background-home-mobile.jpg);
         object-position: center;
+        background-position: top;
+        background-size: cover;
         &.bg-destinations {
             background-image: url(../../public/assets/destination/background-destination-mobile.jpg);
         }
@@ -24,11 +26,10 @@ body {
             background-image: url(../../public/assets/technology/background-technology-mobile.jpg);
         }
     }
-    @media (max-width: 768px) {
+    @media (min-width: 376px), (max-width: 768px) {
         background-image: url(../../public/assets/home/background-home-tablet.jpg);
         background-position: top;
         background-size: cover;
-
         header {
             padding: 24px;
             display: flex;
@@ -39,7 +40,8 @@ body {
             background-image: url(../../public/assets/destination/background-destination-tablet.jpg);
         }
         &.bg-crew {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../public/assets/crew/background-crew-tablet.jpg);
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)), url(../../public/assets/crew/background-crew-tablet.jpg);
+            height: 100%;
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-tablet.jpg);

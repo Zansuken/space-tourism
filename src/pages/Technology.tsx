@@ -29,7 +29,7 @@ function Technology() {
                 <Logo />
                 <NavMenu />
             </header>
-            <main>
+            <main className="technology">
                 <h2><span className="number">03</span>SPACE LAUNCH 101</h2>
                 <img src={image} alt={technologyName[technologyIndex]} className="technology-img" />
                 <div className="tech-nav">

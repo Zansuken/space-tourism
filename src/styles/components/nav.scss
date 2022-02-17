@@ -101,7 +101,9 @@ nav {
     right: calc(-100% + 24px);
     width: 0;
     opacity: 0;
+    display: none;
     @media (min-width: 376px) {
+        display: block;
         right: 0;
         width: 100%;
         max-width: 450px;

@@ -1,39 +1,80 @@
-.technology-img {
-    width: 100vw;
-    object-fit: cover;
-    object-position: center;
-}
-.tech-nav {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    ul {
+.technology {
+    .technology-img {
+        width: 100vw;
+        object-fit: cover;
+        object-position: center;
+    }
+    .tech-nav {
+        width: 100vw;
         display: flex;
-        justify-content: space-between;
-        list-style: none;
-        width: 152px;
-        padding: 0;
-        input[type='radio'] {
-            appearance: none;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: rgba(255, 255, 255, 0.250) 1px solid;
-            border-radius: 50%;
-            cursor: pointer;
-            &:checked {
-                background: white;
-                + label {
-                    color: #0B0D17;
+        justify-content: center;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            width: 152px;
+            padding: 0;
+            input[type='radio'] {
+                appearance: none;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: rgba(255, 255, 255, 0.250) 1px solid;
+                border-radius: 50%;
+                cursor: pointer;
+                &:checked {
+                    background: white;
+                    + label {
+                        color: #0B0D17;
+                    }
                 }
             }
+            label {
+                position: relative;
+                color: white;
+                left: -50%;
+                top: calc(-50% + 0.5em);
+                cursor: pointer;
+            }
         }
-        label {
-            position: relative;
-            color: white;
-            left: -50%;
-            top: calc(-50% + 0.5em);
-            cursor: pointer;
+    }
+    .infos-wrapper {
+        display: flex;
+        flex-direction: column;
+        span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 2.3625px;
+            color: #D0D6F9;
+            margin: 10px 0 9px 0;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+        }
+        p {
+            margin-top: 16px;
+        }
+        @media (min-width: 768px) {
+            span {
+                font-size: 16px;
+                line-height: 19px;
+            }
+            h1 {
+                font-size: 40px;
+                line-height: 46px;
+            }
+            p {
+                padding: 0 155px;
+            }
         }
     }
 }
