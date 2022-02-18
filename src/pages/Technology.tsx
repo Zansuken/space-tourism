@@ -13,7 +13,7 @@ function Technology() {
         const name = element.name.replace(/\s/g, '-').toLocaleLowerCase()
         return name
     })
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     let imageType = (width > 768) ? '-portrait.jpg' : '-landscape.jpg';
 
