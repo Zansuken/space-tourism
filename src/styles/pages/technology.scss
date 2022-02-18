@@ -3,10 +3,10 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        // padding-left: 165px;
+        position: relative;
     }
     .technology-img {
-        width: calc(100vw + 5px);
+        width: 100vw;
         object-fit: cover;
         object-position: center;
         @media (min-width: 768px) {
@@ -14,13 +14,16 @@
             max-width: 100%;
             height: auto;
         }
+        
     }
     .nav-infos-wrapper {
         @media (min-width: 768px) {
             display: flex;
             padding-top: 137px;
-            position: relative;
-            left: 165px;
+            padding-left: 165px;
+        }
+        @media (min-width: 768px) and (max-width: 981px) {
+            flex-direction: column;
         }
         .tech-nav {
             width: 100vw;
@@ -41,6 +44,9 @@
                     justify-content: unset;
                     gap: 32px;
                     margin: 0;
+                }
+                @media (min-width: 768px) and (max-width: 981px) {
+                    flex-direction: row;
                 }
                 input[type='radio'] {
                     appearance: none;
@@ -72,6 +78,10 @@
                         line-height: 37px;
                         left: calc(-25% - 0.3em);
                         top: calc(-50% + 0.45em);
+                    }
+                    @media (min-width: 768px) and (max-width: 981px) {
+                        left: 40%;
+                        top: calc(-65% + 0.5em);
                     }
                 }
             }

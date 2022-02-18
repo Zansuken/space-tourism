@@ -4,6 +4,9 @@
         justify-content: space-between;
         padding-right: 165px;
     }
+    @media (min-height: 375px) and (max-height: 811px) {
+        gap: 70px;
+    }
     .home-intro {
         color: #D0D6F9;
         text-align: center;

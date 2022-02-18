@@ -41,6 +41,7 @@
         }
     }
     .datas-crew-wrapper {
+
         @media (min-width: 376px) {
             display: flex;
             flex-direction: column-reverse;
@@ -49,11 +50,7 @@
             width: fit-content;
             display: flex;
             justify-content: start;
-            padding-left: 165.5px;
-            gap: 120px;
-        }
-        @media (min-width: 1080px) {
-            
+            gap: 80px;
         }
     }
     .crew-nav {
@@ -147,6 +144,7 @@
             h1 {
                 font-size: 40px;
                 line-height: 46px;
+                max-width: 327px;
             }
             p {
                 padding: 0;
@@ -176,6 +174,16 @@
                 margin: 0 0 10px 0;
                 text-align: left;
                 height: 160px;
+            }
+        }
+        @media (min-height: 375px) {
+            span {
+                margin-top: 0;
+            }
+        }
+        @media (min-height: 813px) {
+            span {
+                margin-top: 104px;
             }
         }
     }
