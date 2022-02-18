@@ -6,7 +6,7 @@
         // padding-left: 165px;
     }
     .technology-img {
-        width: 100vw;
+        width: calc(100vw + 5px);
         object-fit: cover;
         object-position: center;
         @media (min-width: 768px) {
