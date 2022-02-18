@@ -45,13 +45,14 @@ body {
         }
         &.bg-technology {
             background-image: url(../../public/assets/technology/background-technology-tablet.jpg);
+            height: 100%;
+            background-size: cover; 
         }
     }
     @media (min-width: 769px) {
         background-image: url(../../public/assets/home/background-home-desktop.jpg);
         background-position: top;
         background-size: cover;
-        height: 100vh;
         &.bg-destinations {
             background-image: url(../../public/assets/destination/background-destination-desktop.jpg);
         }
@@ -61,9 +62,8 @@ body {
         
         }
         &.bg-technology {
-            background-image: url(../../public/assets/technology/background-technology-desktop.jpg);
-            height: 100%;
-        
+            background-image: url(../../public/assets/technology/background-technology-desktop.jpg);      
+            height: 100vh;
         }
     }
 }

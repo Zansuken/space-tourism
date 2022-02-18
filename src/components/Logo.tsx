@@ -1,7 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 function Logo() {
     return (
         <div className="logo">
-            <img src="./assets/shared/logo.svg" alt="logo" />
+            <NavLink to="/">
+                <img src="./assets/shared/logo.svg" alt="logo" />
+            </NavLink>
         </div>
     );
 }
