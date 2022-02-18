@@ -4,6 +4,10 @@
     margin: 0;
     z-index: 15;
     @media (min-width: 376px) {
+        opacity: 0;
+    }
+    @media (min-width: 490px) {
+        opacity: 1;
         padding: 0 0 0 15px;
         width: 48px;
         height: 48px;
