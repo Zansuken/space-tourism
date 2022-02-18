@@ -73,6 +73,7 @@ nav {
         width: 80px;
         padding: 0;
         position: relative;
+        z-index: 10;
         @media (min-width: 376px) {
             padding: 39px 0;
             text-align: center;

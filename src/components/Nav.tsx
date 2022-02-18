@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useOnClickOutside } from 'usehooks-ts'
+// import { useOnClickOutside } from 'usehooks-ts'
 
 
 export default function NavMenu() {
@@ -9,11 +9,11 @@ export default function NavMenu() {
 
     const ref = useRef(null)
 
-    const handleClickOutside = () => {
-        setVisible(false)
-    }
+    // const handleClickOutside = () => {
+    //     setVisible(false)
+    // }
 
-    useOnClickOutside(ref, handleClickOutside)
+    // useOnClickOutside(ref, handleClickOutside)
 
 
     if (!visible) {
@@ -66,28 +66,28 @@ export default function NavMenu() {
                 <ul ref={ref}>
                     <li><NavLink style={({ isActive }) => ({
                         borderRight: isActive ? "4px solid white" : "none",
-                        display: isActive ? "flex" : "block",
+                        display: "flex",
                         justifySelf: isActive ? "right" : "none",
                         width: isActive ? "calc(100% - 4px)" : "unset",
                         padding: "6px 0"
                     })} to='/'><span className='number'>00</span><span className='section-tag'>HOME</span></NavLink></li>
                     <li><NavLink style={({ isActive }) => ({
                         borderRight: isActive ? "4px solid white" : "none",
-                        display: isActive ? "flex" : "block",
+                        display: "flex",
                         justifySelf: isActive ? "right" : "none",
                         width: isActive ? "calc(100% - 4px)" : "unset",
                         padding: "6px 0"
                     })} to='/destinations'><span className='number'>01</span><span className='section-tag'>DESTINATION</span></NavLink></li>
                     <li><NavLink style={({ isActive }) => ({
                         borderRight: isActive ? "4px solid white" : "none",
-                        display: isActive ? "flex" : "block",
+                        display: "flex",
                         justifySelf: isActive ? "right" : "none",
                         width: isActive ? "calc(100% - 4px)" : "unset",
                         padding: "6px 0"
                     })} to='/crew'><span className='number'>02</span><span className='section-tag'>CREW</span></NavLink></li>
                     <li><NavLink style={({ isActive }) => ({
                         borderRight: isActive ? "4px solid white" : "none",
-                        display: isActive ? "flex" : "block",
+                        display: "flex",
                         justifySelf: isActive ? "right" : "none",
                         width: isActive ? "calc(100% - 4px)" : "unset",
                         padding: "6px 0"
