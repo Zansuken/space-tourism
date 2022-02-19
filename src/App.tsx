@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
+import Credits from './components/Credits';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/technology' element={<Technology />} />
         <Route path='*' element={<Home />} />
       </Routes>
+      <Credits />
     </BrowserRouter>
   );
 }

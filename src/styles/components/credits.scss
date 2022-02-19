@@ -1,0 +1,56 @@
+.credits {
+    backdrop-filter: blur(20px);
+    background: #97979763;
+    position: absolute;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em 1em 0 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    .info-button {
+        position: relative;
+        appearance: none;
+        border: none;
+        width: 32px;
+        height: 32px;
+        align-self: flex-end;
+        right: -0.5em;
+        top: -0.5em;
+        cursor: pointer;
+        background: url(../../../public/assets/shared/info.svg) no-repeat;
+        filter: invert(99%) sepia(24%) saturate(6577%) hue-rotate(179deg) brightness(97%) contrast(100%);
+    }
+    .close-button {
+        position: relative;
+        appearance: none;
+        border: none;
+        width: 32px;
+        height: 32px;
+        align-self: flex-end;
+        right: -1em;
+        top: -0.35em;
+        cursor: pointer;
+        background: url(../../../public/assets/shared/icon-close.svg) no-repeat;
+    }
+    a, h3, h4 {
+        margin: 0;
+    }
+    a {
+        color: white;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    h3 {
+        font-weight: 300;
+        // &:first-of-type {
+        //     padding-top: 1em;
+        // }
+    }
+    h2 {
+        font-size: 0.7em;
+        font-weight: 300;
+    }
+}
