@@ -1,15 +1,34 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 
 function Credits() {
 
     const [hidden, setHidden] = useState(true);
 
+    const ref = useRef(null)
+
+    const isHidden = hidden ? {
+        display: 'none'
+    } : {
+        display: 'inline'
+    }
+
+    const handleClickOutside = () => {
+        if (hidden === false) {
+            setHidden(!hidden)
+        }
+    }
+
+    useOnClickOutside(ref, handleClickOutside)
+
 
     return (
-        <div className="credits" style={
+        <div className="credits" ref={ref} style={
             hidden ? {
-                bottom: '-126px',
-                left: '-205.23px'
+                bottom: '0',
+                left: '1em',
+                height: 'fit-content',
+                padding: '0.5em'
             } : {
                 bottom: '0',
                 left: '50%',
@@ -17,10 +36,10 @@ function Credits() {
             }
         }>
             {hidden ? <button onClick={() => setHidden(!hidden)} className="info-button"></button> : <button onClick={() => setHidden(!hidden)} className="close-button"></button>}
-            <h3>A FrontendMentor project coded by </h3>
-            <a href="https://zansuken.netlify.app">Zansuken</a>
-            <h3>with React/Typescript/Sass</h3>
-            <h4>© 2022 Zansuken</h4>
+            <h3 style={isHidden}>A FrontendMentor project coded by </h3>
+            <a style={isHidden} href="https://zansuken.netlify.app">Zansuken</a>
+            <h3 style={isHidden}>with React/Typescript/Sass</h3>
+            <h4 style={isHidden}>© 2022 Zansuken</h4>
         </div>
     );
 }
