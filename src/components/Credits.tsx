@@ -28,7 +28,8 @@ function Credits() {
                 bottom: '1em',
                 left: '1em',
                 height: 'fit-content',
-                padding: '0.5em'
+                padding: '0.5em',
+                transform: 'scale(0.7)'
             } : {
                 bottom: '1em',
                 left: '50%',
