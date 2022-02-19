@@ -1,9 +1,21 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { useOnClickOutside } from 'usehooks-ts'
 import isVisibleLink from './NavLinks'
 
 export default function NavMenu() {
 
     const [visible, setVisible] = useState(false)
+
+    const handleClickOutside = () => {
+        if (visible === true) {
+            setVisible(!visible)
+        }
+    }
+
+    const ref = useRef(null)
+
+
+    useOnClickOutside(ref, handleClickOutside)
 
     if (!visible) {
         return (
@@ -18,7 +30,7 @@ export default function NavMenu() {
         )
     }
     return (
-        <>
+        <div ref={ref}>
             <button className="cross-logo" onClick={() => setVisible(!visible)} />
             <nav className='visible'>
                 <ul>
@@ -26,7 +38,7 @@ export default function NavMenu() {
                 </ul>
 
             </nav>
-        </>
+        </div>
     )
 
 }

@@ -13,16 +13,16 @@ body {
     background-position: center center;
     background-attachment: fixed;
     &.bg-technology, &.bg-destinations {
-        @media (min-height: 375px) {
-            h2 {
-                margin-bottom: 0;
-            }
-        }
-        @media (min-height: 813px) {
-            h2 {
-                margin-bottom: 0;
-            }
-        }
+        // @media (min-height: 375px) {
+        //     h2 {
+        //         margin-bottom: 0;
+        //     }
+        // }
+        // @media (min-height: 813px) {
+        //     h2 {
+        //         margin-bottom: 0;
+        //     }
+        // }
     }
     &.bg-home {
         @media (max-height: 768px) {

@@ -25,12 +25,12 @@ function Credits() {
     return (
         <div className="credits" ref={ref} style={
             hidden ? {
-                bottom: '0',
+                bottom: '1em',
                 left: '1em',
                 height: 'fit-content',
                 padding: '0.5em'
             } : {
-                bottom: '0',
+                bottom: '1em',
                 left: '50%',
                 transform: 'translateX(-50%)'
             }

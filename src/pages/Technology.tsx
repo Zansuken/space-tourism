@@ -17,7 +17,7 @@ function Technology() {
 
     let imageType = (width > 768) ? '-portrait.jpg' : '-landscape.jpg';
 
-    let blurEffect = (width >= 769 && width <= 1300)
+    // let blurEffect = (width >= 769 && width <= 1300)
 
     const technologiesNames = [technologies[0].name, technologies[1].name, technologies[2].name]
     const [selectedTechnology, setSelectedTechnology] = useState(technologiesNames[0])
@@ -64,10 +64,7 @@ function Technology() {
                             }
                         </ul>
                     </div>
-                    <div className="infos-wrapper" style={blurEffect ? {
-                        backdropFilter: "blur(20px)",
-                        background: "#9797970a",
-                    } : undefined}>
+                    <div className="infos-wrapper" >
                         <span>THE TERMINOLOGY...</span>
                         <h1>{technologies[technologyIndex].name}</h1>
                         <p>{technologies[technologyIndex].description}</p>

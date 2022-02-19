@@ -4,15 +4,20 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         position: relative;
+        padding-left: 165px;
+    }
+    @media (max-width: 1150px) and (min-width: 768px) {
+        margin: 0;
+        width: fit-content;
+        overflow: hidden;
     }
     .technology-img {
         width: 100vw;
         object-fit: cover;
         object-position: center;
         @media (min-width: 768px) {
-            width: auto;
-            max-width: 100%;
-            height: auto;
+            max-width: 515px;
+            max-height: 527px;
         }
         
     }
@@ -20,10 +25,16 @@
         @media (min-width: 768px) {
             display: flex;
             padding-top: 137px;
-            padding-left: 165px;
         }
         @media (min-width: 768px) and (max-width: 981px) {
             flex-direction: column;
+            padding-left: 0;
+            width: 50%;
+        }
+        @media (max-width: 1150px) and (min-width: 981px) {
+            flex-direction: column;
+            padding-left: 0;
+            width: 50%;
         }
         .tech-nav {
             width: 100vw;
@@ -46,6 +57,9 @@
                     margin: 0;
                 }
                 @media (min-width: 768px) and (max-width: 981px) {
+                    flex-direction: row;
+                }
+                @media (max-width: 1150px) and (min-width: 981px) {
                     flex-direction: row;
                 }
                 input[type='radio'] {
@@ -80,6 +94,10 @@
                         top: calc(-50% + 0.45em);
                     }
                     @media (min-width: 768px) and (max-width: 981px) {
+                        left: 40%;
+                        top: calc(-65% + 0.5em);
+                    }
+                    @media (max-width: 1150px) and (min-width: 981px) {
                         left: 40%;
                         top: calc(-65% + 0.5em);
                     }
