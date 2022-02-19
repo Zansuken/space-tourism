@@ -49,7 +49,7 @@
         @media (min-width: 768px) {
             width: fit-content;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             gap: 80px;
             padding-left: 168.5px;
         }
@@ -64,7 +64,7 @@
         ul  {
             width: 88px;
             display: flex;
-            justify-self: center;
+            justify-self: flex;
             justify-content: space-between;
             padding: 0;
             list-style: none;

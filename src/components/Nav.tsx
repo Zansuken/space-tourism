@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import isVisibleLink from './NavLinks'
 
 export default function NavMenu() {
