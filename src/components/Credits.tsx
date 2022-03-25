@@ -36,7 +36,7 @@ function Credits() {
                 transform: 'translateX(-50%)'
             }
         }>
-            {hidden ? <button onClick={() => setHidden(!hidden)} className="info-button"></button> : <button onClick={() => setHidden(!hidden)} className="close-button"></button>}
+            {hidden ? <button onClick={() => setHidden(!hidden)} className="info-button" /> : <button onClick={() => setHidden(!hidden)} className="close-button" />}
             <h3 style={isHidden}>A FrontendMentor project coded by </h3>
             <a style={isHidden} href="https://zansuken.netlify.app">Zansuken</a>
             <h3 style={isHidden}>with React/Typescript/Sass</h3>
