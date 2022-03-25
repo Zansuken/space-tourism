@@ -17,7 +17,7 @@ const Home: FC = () => {
                 <Logo />
                 <NavMenu />
             </header>
-            <section className='home'>
+            <section className='home' role={'article'}>
                 <div className="home-intro">
 
                     <h2>SO, YOU WANT TO TRAVEL TO</h2>
