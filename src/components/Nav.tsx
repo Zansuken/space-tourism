@@ -23,7 +23,7 @@ export default function NavMenu() {
                 <button className="hamburger-logo" onClick={() => setVisible(!visible)} />
                 <nav className='hidden'>
                     <ul>
-                        {isVisibleLink[0]}
+                        {isVisibleLink[0].map((link, index) => <li key={index}>{link}</li>)}
                     </ul>
                 </nav>
             </>
@@ -34,7 +34,7 @@ export default function NavMenu() {
             <button className="cross-logo" onClick={() => setVisible(!visible)} />
             <nav className='visible'>
                 <ul>
-                    {isVisibleLink[1]}
+                    {isVisibleLink[1].map((link, index) => <li key={index}>{link}</li>)}
                 </ul>
 
             </nav>
