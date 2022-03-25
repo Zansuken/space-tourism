@@ -29,7 +29,7 @@ export default function Destination() {
             </header>
 
             <h2><span className="number">01</span>PICK YOUR DESTINATION</h2>
-            <section className="destination">
+            <main className="destination">
                 <img src={image} alt={planet[planetIndex].name + " picture"} />
                 <div className="destination-infos-wrapper">
 
@@ -80,7 +80,7 @@ export default function Destination() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </main>
         </>
     )
 }

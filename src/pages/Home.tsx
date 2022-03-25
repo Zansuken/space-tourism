@@ -17,7 +17,7 @@ const Home: FC = () => {
                 <Logo />
                 <NavMenu />
             </header>
-            <section className='home'>
+            <main className='home'>
                 <div className="home-intro">
 
                     <h2>SO, YOU WANT TO TRAVEL TO</h2>
@@ -27,7 +27,7 @@ const Home: FC = () => {
                 <div className='explore-wrapper'>
                     <NavLink to='/destinations' className='explore-button'>EXPLORE</NavLink>
                 </div>
-            </section>
+            </main>
         </>
     )
 }
